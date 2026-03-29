@@ -1,7 +1,8 @@
 # Hierarchical Semantic Segmentation on Pascal-Part
 
-This repository contains a hierarchical semantic segmentation pipeline for a prepared Pascal-Part subset with RGB images in `JPEGImages/` and segmentation masks in `gt_masks/*.npy`.
+This repository contains a hierarchical semantic segmentation pipeline for a prepared Pascal-Part subset with RGB images
 
+This is the result of both Codex and hierarchical segmentation approaches testing.
 
 TODO:
  - add access to MLFlow logs
