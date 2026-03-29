@@ -84,6 +84,10 @@ reports/**/*.webp
 !reports/README.md
 !reports/*.json
 !reports/readme_examples_segformer/
+!reports/readme_examples_segformer/*.png
+!reports/readme_examples_segformer/*.jpg
+!reports/readme_examples_segformer/*.jpeg
+!reports/readme_examples_segformer/
 !reports/readme_examples_segformer/001_2008_000003_original.jpg
 !reports/readme_examples_segformer/001_2008_000003_gt_overlay.jpg
 !reports/readme_examples_segformer/001_2008_000003_pred_overlay.jpg
