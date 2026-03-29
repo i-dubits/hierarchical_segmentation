@@ -1,0 +1,86 @@
+seed: 42
+device: cuda
+
+data:
+  root: data/Pascal-part
+  image_dir: JPEGImages
+  mask_dir: gt_masks
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+  split_file: splits.json
+  id_based_test_ratio: 0.0
+  val_ratio: 0.1
+  test_ratio: 0.1
+  image_size: [384, 384]
+  class_aware_crop:
+    enabled: false
+    probability: 0.5
+    crop_size: null
+    target_class_ids: [1, 2, 3, 4, 5, 6]
+    min_target_pixels: 32
+    max_tries: 10
+    fallback_to_random_crop: true
+  augmentations:
+    scale_jitter:
+      enabled: false
+      min_scale: 1.0
+      max_scale: 1.0
+    photometric_distortion:
+      enabled: false
+      probability: 0.8
+      brightness: 0.0
+      contrast: 0.0
+      saturation: 0.0
+      hue: 0.0
+
+training:
+  epochs: 40
+  batch_size: 8
+  num_workers: 4
+  lr: 0.0003
+  weight_decay: 0.0001
+  amp: true
+  scheduler:
+    name: cosine
+    warmup_epochs: 0
+    eta_min: 0.0
+  checkpoint_metric: miou_l2
+  loss_weights:
+    l2: 1.0
+    l1: 0.5
+    l0: 0.25
+    consistency: 0.2
+  # Supported values: `mse`, `kl`, `mse_bidirectional`, `kl_bidirectional`.
+  consistency: mse
+  class_weights_l2: null
+  early_stopping:
+    enabled: true
+    patience: 5
+    min_delta: 0.0
+    metric: loss
+    mode: min
+
+mlflow:
+  enabled: false
+  tracking_uri: null
+  experiment_name: hseg
+  run_name: null
+  log_artifacts: true
+
+inference:
+  palette:
+    level0:
+      - [0, 0, 0]
+      - [255, 255, 255]
+    level1:
+      - [0, 0, 0]
+      - [255, 145, 70]
+      - [65, 155, 255]
+    level2:
+      - [0, 0, 0]
+      - [255, 120, 60]
+      - [255, 70, 70]
+      - [50, 135, 255]
+      - [255, 225, 50]
+      - [70, 235, 120]
+      - [185, 80, 255]

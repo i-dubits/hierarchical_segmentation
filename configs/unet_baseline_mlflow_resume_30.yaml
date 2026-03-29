@@ -1,0 +1,7 @@
+base_config: unet_baseline_mlflow_test.yaml
+
+training:
+  epochs: 30
+
+mlflow:
+  run_name: unet_baseline_mlflow_resume_to_30

@@ -1,0 +1,29 @@
+base_config: common.yaml
+
+data:
+  split_file: splits_deeplab_ft.json
+  id_based_test_ratio: 0.1
+  image_size: [320, 320]
+
+model:
+  name: unet
+  in_channels: 3
+  base_channels: 48
+  dropout: 0.1
+
+training:
+  epochs: 20
+  batch_size: 12
+  lr: 0.0002
+  scheduler:
+    name: cosine
+    warmup_epochs: 2
+    warmup_start_factor: 0.2
+    eta_min: 0.000001
+
+mlflow:
+  enabled: true
+  tracking_uri: file:./mlruns
+  experiment_name: pascal-part-segmentation
+  run_name: unet_baseline_mlflow_test
+  log_artifacts: true

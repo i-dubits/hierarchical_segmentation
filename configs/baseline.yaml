@@ -1,0 +1,7 @@
+base_config: common.yaml
+
+model:
+  name: unet
+  in_channels: 3
+  base_channels: 32
+  dropout: 0.1

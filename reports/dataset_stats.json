@@ -1,0 +1,665 @@
+{
+  "dataset_root": "data/Pascal-part",
+  "inventory": {
+    "num_image_files": 3533,
+    "num_mask_files": 3533,
+    "num_matched_pairs": 3533,
+    "num_valid_masks_for_statistics": 3533,
+    "image_extension_counts": {
+      ".jpg": 3533
+    },
+    "duplicate_image_stems_count": 0,
+    "duplicate_mask_stems_count": 0,
+    "image_only_stems_count": 0,
+    "mask_only_stems_count": 0,
+    "image_only_stems_examples": [],
+    "mask_only_stems_examples": [],
+    "split_definition": {
+      "source": "split_file",
+      "split_file": "data/Pascal-part/splits_deeplab_ft.json",
+      "split_counts": {
+        "train": 2544,
+        "val": 707,
+        "test": 282
+      }
+    }
+  },
+  "image_statistics": {
+    "width_summary": {
+      "count": 3533,
+      "min": 191.0,
+      "max": 500.0,
+      "mean": 464.6532691763374,
+      "std": 63.313944796104884,
+      "median": 500.0,
+      "p05": 333.0,
+      "p25": 460.0,
+      "p75": 500.0,
+      "p95": 500.0
+    },
+    "height_summary": {
+      "count": 3533,
+      "min": 121.0,
+      "max": 500.0,
+      "mean": 391.1500141522785,
+      "std": 64.20522063932833,
+      "median": 375.0,
+      "p05": 326.0,
+      "p25": 342.0,
+      "p75": 400.0,
+      "p95": 500.0
+    },
+    "area_summary": {
+      "count": 3533,
+      "min": 41250.0,
+      "max": 250000.0,
+      "mean": 178874.63515425983,
+      "std": 20374.803507231947,
+      "median": 187500.0,
+      "p05": 149745.0,
+      "p25": 166500.0,
+      "p75": 187500.0,
+      "p95": 199000.0
+    },
+    "aspect_ratio_w_over_h_summary": {
+      "count": 3533,
+      "min": 0.382,
+      "max": 4.132231404958677,
+      "mean": 1.2345939769349352,
+      "std": 0.30074750771647996,
+      "median": 1.3333333333333333,
+      "p05": 0.666,
+      "p25": 1.1848341232227488,
+      "p75": 1.3888888888888888,
+      "p95": 1.5060240963855422
+    },
+    "orientation_counts": {
+      "landscape": 2712,
+      "portrait": 807,
+      "square": 14
+    },
+    "top_15_image_sizes": [
+      {
+        "size": "500x375",
+        "count": 1489
+      },
+      {
+        "size": "500x333",
+        "count": 426
+      },
+      {
+        "size": "375x500",
+        "count": 349
+      },
+      {
+        "size": "333x500",
+        "count": 134
+      },
+      {
+        "size": "500x334",
+        "count": 74
+      },
+      {
+        "size": "500x332",
+        "count": 66
+      },
+      {
+        "size": "500x374",
+        "count": 30
+      },
+      {
+        "size": "334x500",
+        "count": 25
+      },
+      {
+        "size": "500x335",
+        "count": 25
+      },
+      {
+        "size": "500x338",
+        "count": 22
+      },
+      {
+        "size": "480x360",
+        "count": 21
+      },
+      {
+        "size": "500x400",
+        "count": 20
+      },
+      {
+        "size": "500x377",
+        "count": 17
+      },
+      {
+        "size": "500x331",
+        "count": 16
+      },
+      {
+        "size": "332x500",
+        "count": 16
+      }
+    ]
+  },
+  "mask_integrity": {
+    "mask_shape_unique_count": 427,
+    "top_15_mask_shapes": [
+      {
+        "shape": "500x375",
+        "count": 1489
+      },
+      {
+        "shape": "500x333",
+        "count": 426
+      },
+      {
+        "shape": "375x500",
+        "count": 349
+      },
+      {
+        "shape": "333x500",
+        "count": 134
+      },
+      {
+        "shape": "500x334",
+        "count": 74
+      },
+      {
+        "shape": "500x332",
+        "count": 66
+      },
+      {
+        "shape": "500x374",
+        "count": 30
+      },
+      {
+        "shape": "334x500",
+        "count": 25
+      },
+      {
+        "shape": "500x335",
+        "count": 25
+      },
+      {
+        "shape": "500x338",
+        "count": 22
+      },
+      {
+        "shape": "480x360",
+        "count": 21
+      },
+      {
+        "shape": "500x400",
+        "count": 20
+      },
+      {
+        "shape": "500x377",
+        "count": 17
+      },
+      {
+        "shape": "500x331",
+        "count": 16
+      },
+      {
+        "shape": "332x500",
+        "count": 16
+      }
+    ],
+    "mask_dtype_counts": {
+      "uint8": 3533
+    },
+    "invalid_or_out_of_range_mask_count": 0,
+    "invalid_or_out_of_range_mask_examples": [],
+    "image_mask_size_mismatch_count": 0,
+    "image_mask_size_mismatch_examples": []
+  },
+  "class_balance": {
+    "total_pixels": 631964086,
+    "foreground_pixels": 135141487,
+    "foreground_ratio_percent": 21.384361863879715,
+    "empty_foreground_images_count": 0,
+    "empty_foreground_images_examples": [],
+    "level0": [
+      {
+        "class_id": 0,
+        "class_name": "background",
+        "pixel_count": 496822599,
+        "pixel_ratio_percent": 78.61563813612028,
+        "image_count": 3533,
+        "image_ratio_percent": 100.0,
+        "present_area_ratio_summary": {
+          "count": 3533,
+          "min": 0.052204204204204206,
+          "max": 0.9999946666666667,
+          "mean": 0.7863570039368257,
+          "std": 0.1926892614941723,
+          "median": 0.843,
+          "p05": 0.40951573333333335,
+          "p25": 0.6628346883468834,
+          "p75": 0.9499047619047619,
+          "p95": 0.995168
+        }
+      },
+      {
+        "class_id": 1,
+        "class_name": "body",
+        "pixel_count": 135141487,
+        "pixel_ratio_percent": 21.384361863879715,
+        "image_count": 3533,
+        "image_ratio_percent": 100.0,
+        "present_area_ratio_summary": {
+          "count": 3533,
+          "min": 5.333333333333334e-06,
+          "max": 0.9477957957957958,
+          "mean": 0.21364299606317425,
+          "std": 0.1926892614941723,
+          "median": 0.157,
+          "p05": 0.004832,
+          "p25": 0.050095238095238095,
+          "p75": 0.33716531165311653,
+          "p95": 0.5904842666666666
+        }
+      }
+    ],
+    "level1": [
+      {
+        "class_id": 0,
+        "class_name": "background",
+        "pixel_count": 496822599,
+        "pixel_ratio_percent": 78.61563813612028,
+        "image_count": 3533,
+        "image_ratio_percent": 100.0,
+        "present_area_ratio_summary": {
+          "count": 3533,
+          "min": 0.052204204204204206,
+          "max": 0.9999946666666667,
+          "mean": 0.7863570039368257,
+          "std": 0.1926892614941723,
+          "median": 0.843,
+          "p05": 0.40951573333333335,
+          "p25": 0.6628346883468834,
+          "p75": 0.9499047619047619,
+          "p95": 0.995168
+        }
+      },
+      {
+        "class_id": 1,
+        "class_name": "upper_body",
+        "pixel_count": 112568243,
+        "pixel_ratio_percent": 17.812443063418005,
+        "image_count": 3512,
+        "image_ratio_percent": 99.40560430229267,
+        "present_area_ratio_summary": {
+          "count": 3512,
+          "min": 5.333333333333334e-06,
+          "max": 0.9477957957957958,
+          "mean": 0.1789170143371868,
+          "std": 0.18577879942700215,
+          "median": 0.10940928952905,
+          "p05": 0.003265559871248494,
+          "p25": 0.031072,
+          "p75": 0.2804694792122538,
+          "p95": 0.56832616626506
+        }
+      },
+      {
+        "class_id": 2,
+        "class_name": "lower_body",
+        "pixel_count": 22573244,
+        "pixel_ratio_percent": 3.5719188004617086,
+        "image_count": 2608,
+        "image_ratio_percent": 73.81828474384376,
+        "present_area_ratio_summary": {
+          "count": 2608,
+          "min": 4.8e-05,
+          "max": 0.4614234234234234,
+          "mean": 0.04848318663305011,
+          "std": 0.05167843750698925,
+          "median": 0.03147733333333333,
+          "p05": 0.0015044217445792246,
+          "p25": 0.01114878078078078,
+          "p75": 0.06952799999999999,
+          "p95": 0.15354824845814988
+        }
+      }
+    ],
+    "level2": [
+      {
+        "class_id": 0,
+        "class_name": "background",
+        "pixel_count": 496822599,
+        "pixel_ratio_percent": 78.61563813612028,
+        "image_count": 3533,
+        "image_ratio_percent": 100.0,
+        "present_area_ratio_summary": {
+          "count": 3533,
+          "min": 0.052204204204204206,
+          "max": 0.9999946666666667,
+          "mean": 0.7863570039368257,
+          "std": 0.1926892614941723,
+          "median": 0.843,
+          "p05": 0.40951573333333335,
+          "p25": 0.6628346883468834,
+          "p75": 0.9499047619047619,
+          "p95": 0.995168
+        }
+      },
+      {
+        "class_id": 1,
+        "class_name": "low_hand",
+        "pixel_count": 13854545,
+        "pixel_ratio_percent": 2.1922994212680624,
+        "image_count": 3175,
+        "image_ratio_percent": 89.86696858194169,
+        "present_area_ratio_summary": {
+          "count": 3175,
+          "min": 5.333333333333334e-06,
+          "max": 0.29561194029850746,
+          "mean": 0.02444497700934767,
+          "std": 0.03027859839966342,
+          "median": 0.013312,
+          "p05": 0.000393736546184739,
+          "p25": 0.004048024024024025,
+          "p75": 0.03372821621621622,
+          "p95": 0.08376494414414412
+        }
+      },
+      {
+        "class_id": 2,
+        "class_name": "torso",
+        "pixel_count": 43939027,
+        "pixel_ratio_percent": 6.952772787787818,
+        "image_count": 3451,
+        "image_ratio_percent": 97.67902632323805,
+        "present_area_ratio_summary": {
+          "count": 3451,
+          "min": 7.207207207207208e-05,
+          "max": 0.5250666666666667,
+          "mean": 0.07115880999168202,
+          "std": 0.07665893712262091,
+          "median": 0.043863134657836644,
+          "p05": 0.0015706666666666666,
+          "p25": 0.012674666666666667,
+          "p75": 0.10572439694656488,
+          "p95": 0.23260282325231849
+        }
+      },
+      {
+        "class_id": 3,
+        "class_name": "low_leg",
+        "pixel_count": 8280090,
+        "pixel_ratio_percent": 1.3102152770118016,
+        "image_count": 2188,
+        "image_ratio_percent": 61.93037078969714,
+        "present_area_ratio_summary": {
+          "count": 2188,
+          "min": 6.006006006006006e-06,
+          "max": 0.35868316831683167,
+          "mean": 0.02112052203950154,
+          "std": 0.027501533323487367,
+          "median": 0.011711855855855855,
+          "p05": 0.0005646378265412749,
+          "p25": 0.00401754577157803,
+          "p75": 0.027044,
+          "p95": 0.0746194217468806
+        }
+      },
+      {
+        "class_id": 4,
+        "class_name": "head",
+        "pixel_count": 38017699,
+        "pixel_ratio_percent": 6.01580055610945,
+        "image_count": 3411,
+        "image_ratio_percent": 96.54684404189075,
+        "present_area_ratio_summary": {
+          "count": 3411,
+          "min": 4.535147392290249e-06,
+          "max": 0.9477957957957958,
+          "mean": 0.061982016808657704,
+          "std": 0.09353387434116989,
+          "median": 0.025736526946107785,
+          "p05": 0.0005498333333333334,
+          "p25": 0.006596285714285714,
+          "p75": 0.07684266666666667,
+          "p95": 0.24918400387965606
+        }
+      },
+      {
+        "class_id": 5,
+        "class_name": "up_leg",
+        "pixel_count": 14293154,
+        "pixel_ratio_percent": 2.2617035234499068,
+        "image_count": 2533,
+        "image_ratio_percent": 71.69544296631757,
+        "present_area_ratio_summary": {
+          "count": 2533,
+          "min": 3.733333333333333e-05,
+          "max": 0.40135135135135136,
+          "mean": 0.03167487110800052,
+          "std": 0.03618199828904354,
+          "median": 0.019187675070028012,
+          "p05": 0.0009845333333333335,
+          "p25": 0.00660655737704918,
+          "p75": 0.04479466666666667,
+          "p95": 0.10351300410358003
+        }
+      },
+      {
+        "class_id": 6,
+        "class_name": "up_hand",
+        "pixel_count": 16756972,
+        "pixel_ratio_percent": 2.6515702982526763,
+        "image_count": 3284,
+        "image_ratio_percent": 92.95216529861308,
+        "present_area_ratio_summary": {
+          "count": 3284,
+          "min": 6.006006006006006e-06,
+          "max": 0.39909597523219814,
+          "mean": 0.02854873317049178,
+          "std": 0.030931870917962914,
+          "median": 0.01759147147147147,
+          "p05": 0.0006941526104417671,
+          "p25": 0.005512963350785341,
+          "p75": 0.04290074474474474,
+          "p95": 0.08845005695350523
+        }
+      }
+    ]
+  },
+  "hierarchy_specific": {
+    "upper_pixels": 112568243,
+    "lower_pixels": 22573244,
+    "upper_ratio_within_body_percent": 83.29658456399847,
+    "lower_ratio_within_body_percent": 16.703415436001528,
+    "body_coverage_per_image_summary": {
+      "count": 3533,
+      "min": 5.333333333333334e-06,
+      "max": 0.9477957957957958,
+      "mean": 0.21364299606317425,
+      "std": 0.1926892614941723,
+      "median": 0.157,
+      "p05": 0.004832,
+      "p25": 0.050095238095238095,
+      "p75": 0.33716531165311653,
+      "p95": 0.5904842666666666
+    },
+    "upper_coverage_per_image_summary": {
+      "count": 3533,
+      "min": 0.0,
+      "max": 0.9477957957957958,
+      "mean": 0.17785353930150014,
+      "std": 0.18573571761313845,
+      "median": 0.10853333333333333,
+      "p05": 0.002607971171171172,
+      "p25": 0.030198668341369205,
+      "p75": 0.279248,
+      "p95": 0.56625204819277
+    },
+    "lower_coverage_per_image_summary": {
+      "count": 3533,
+      "min": 0.0,
+      "max": 0.4614234234234234,
+      "mean": 0.03578945676167413,
+      "std": 0.04925177932233454,
+      "median": 0.01567379679144385,
+      "p05": 0.0,
+      "p25": 0.0,
+      "p75": 0.0513033033033033,
+      "p95": 0.13482842414579557
+    },
+    "upper_lower_presence_pattern": {
+      "both": {
+        "images": 2587,
+        "ratio_percent": 73.22388904613643
+      },
+      "lower_only": {
+        "images": 21,
+        "ratio_percent": 0.5943956977073309
+      },
+      "upper_only": {
+        "images": 925,
+        "ratio_percent": 26.18171525615624
+      }
+    },
+    "foreground_class_count_per_image_distribution": {
+      "1": {
+        "images": 35,
+        "ratio_percent": 0.9906594961788848
+      },
+      "2": {
+        "images": 122,
+        "ratio_percent": 3.4531559581092557
+      },
+      "3": {
+        "images": 202,
+        "ratio_percent": 5.717520520803849
+      },
+      "4": {
+        "images": 681,
+        "ratio_percent": 19.27540333993773
+      },
+      "5": {
+        "images": 525,
+        "ratio_percent": 14.859892442683272
+      },
+      "6": {
+        "images": 1968,
+        "ratio_percent": 55.703368242287006
+      }
+    }
+  },
+  "cooccurrence": {
+    "foreground_fine_class_image_cooccurrence": {
+      "low_hand": {
+        "low_hand": 3175,
+        "torso": 3134,
+        "low_leg": 2099,
+        "head": 3084,
+        "up_leg": 2441,
+        "up_hand": 3094
+      },
+      "torso": {
+        "low_hand": 3134,
+        "torso": 3451,
+        "low_leg": 2152,
+        "head": 3372,
+        "up_leg": 2503,
+        "up_hand": 3267
+      },
+      "low_leg": {
+        "low_hand": 2099,
+        "torso": 2152,
+        "low_leg": 2188,
+        "head": 2094,
+        "up_leg": 2113,
+        "up_hand": 2113
+      },
+      "head": {
+        "low_hand": 3084,
+        "torso": 3372,
+        "low_leg": 2094,
+        "head": 3411,
+        "up_leg": 2438,
+        "up_hand": 3222
+      },
+      "up_leg": {
+        "low_hand": 2441,
+        "torso": 2503,
+        "low_leg": 2113,
+        "head": 2438,
+        "up_leg": 2533,
+        "up_hand": 2458
+      },
+      "up_hand": {
+        "low_hand": 3094,
+        "torso": 3267,
+        "low_leg": 2113,
+        "head": 3222,
+        "up_leg": 2458,
+        "up_hand": 3284
+      }
+    }
+  },
+  "split_statistics": {
+    "train": {
+      "samples": 2544,
+      "sample_ratio_percent": 72.00679309368809,
+      "total_pixels": 454998505,
+      "foreground_ratio_percent": 21.253687635742892,
+      "fine_class_pixel_ratio_percent": {
+        "background": 78.74631236425711,
+        "low_hand": 2.164876124153419,
+        "torso": 6.879063481758034,
+        "low_leg": 1.300394162833568,
+        "head": 6.003385439695016,
+        "up_leg": 2.2577718139974987,
+        "up_hand": 2.648196613305356
+      }
+    },
+    "val": {
+      "samples": 707,
+      "sample_ratio_percent": 20.01132182281347,
+      "total_pixels": 126362748,
+      "foreground_ratio_percent": 22.044054470863518,
+      "fine_class_pixel_ratio_percent": {
+        "background": 77.95594552913649,
+        "low_hand": 2.2076403403319467,
+        "torso": 7.2901366469174915,
+        "low_leg": 1.374895708979042,
+        "head": 6.137976676480635,
+        "up_leg": 2.332540283153703,
+        "up_hand": 2.7008648150006995
+      }
+    },
+    "test": {
+      "samples": 282,
+      "sample_ratio_percent": 7.981885083498443,
+      "total_pixels": 50602833,
+      "foreground_ratio_percent": 20.911977398577665,
+      "fine_class_pixel_ratio_percent": {
+        "background": 79.08802260142234,
+        "low_hand": 2.4005691539048812,
+        "torso": 6.773087190592669,
+        "low_leg": 1.237005841155178,
+        "head": 5.8223400259032925,
+        "up_leg": 2.1201658808312174,
+        "up_hand": 2.558809306190426
+      }
+    },
+    "unassigned": {
+      "samples": 0,
+      "sample_ratio_percent": 0.0,
+      "total_pixels": 0,
+      "foreground_ratio_percent": 0.0,
+      "fine_class_pixel_ratio_percent": {
+        "background": 0.0,
+        "low_hand": 0.0,
+        "torso": 0.0,
+        "low_leg": 0.0,
+        "head": 0.0,
+        "up_leg": 0.0,
+        "up_hand": 0.0
+      }
+    }
+  }
+}

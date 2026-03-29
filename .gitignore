@@ -1,0 +1,118 @@
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+
+# Virtual environments and local env files
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+
+# Tooling caches and reports
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Notebook artifacts
+.ipynb_checkpoints/
+
+# IDE/editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Experiment tracking and runtime logs
+runs/
+logs/
+outputs/
+artifacts/
+checkpoints/
+mlruns/
+wandb/
+
+# Local datasets and large binary artifacts
+data/
+dataset/
+datasets/
+pascal_part/
+JPEGImages/
+gt_masks/
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Agent instructions and local planning notes
+AGENTS*.md
+Plan.md
+SESSION_CONTEXT.md
+report_for_GPT_PRO.md
+Test\ assignment.md
+
+# Generated reports/artifacts (keep registry + JSON metrics + README example images)
+reports/test_predictions_*/
+reports/visual_analysis/
+reports/dataset_report.md
+reports/readme_examples_segformer/
+reports/**/*.png
+reports/**/*.jpg
+reports/**/*.jpeg
+reports/**/*.webp
+!reports/README.md
+!reports/*.json
+!reports/readme_examples_segformer/
+!reports/readme_examples_segformer/001_2008_000003_original.jpg
+!reports/readme_examples_segformer/001_2008_000003_gt_overlay.jpg
+!reports/readme_examples_segformer/001_2008_000003_pred_overlay.jpg
+!reports/readme_examples_segformer/002_2008_000090_original.jpg
+!reports/readme_examples_segformer/002_2008_000090_gt_overlay.jpg
+!reports/readme_examples_segformer/002_2008_000090_pred_overlay.jpg
+!reports/readme_examples_segformer/003_2008_000096_original.jpg
+!reports/readme_examples_segformer/003_2008_000096_gt_overlay.jpg
+!reports/readme_examples_segformer/003_2008_000096_pred_overlay.jpg
+!reports/readme_examples_segformer/007_2008_000367_original.jpg
+!reports/readme_examples_segformer/007_2008_000367_gt_overlay.jpg
+!reports/readme_examples_segformer/007_2008_000367_pred_overlay.jpg
+!reports/readme_examples_segformer/008_2008_000406_original.jpg
+!reports/readme_examples_segformer/008_2008_000406_gt_overlay.jpg
+!reports/readme_examples_segformer/008_2008_000406_pred_overlay.jpg
+
+# Model weights and checkpoints (large binaries)
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+*.tflite
+
+# Secrets and machine-local metadata
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+*.secrets
+.python-version

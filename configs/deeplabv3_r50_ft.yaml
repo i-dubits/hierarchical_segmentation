@@ -1,0 +1,23 @@
+base_config: common.yaml
+
+data:
+  split_file: splits_deeplab_ft.json
+  id_based_test_ratio: 0.1
+  image_size: [320, 320]
+
+model:
+  name: deeplabv3_resnet50
+  pretrained: true
+  pretrained_backbone: true
+  freeze_backbone: false
+  dropout: 0.1
+
+training:
+  epochs: 20
+  batch_size: 12
+  lr: 0.0001
+  scheduler:
+    name: cosine
+    warmup_epochs: 2
+    warmup_start_factor: 0.2
+    eta_min: 0.000001
